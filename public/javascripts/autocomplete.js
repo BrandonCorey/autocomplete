@@ -13,7 +13,7 @@ class Autocomplete {
 
     this.valueChanged = debounce(this.valueChanged.bind(this), 300); // Retuns new version of valueChanged that executes after 300ms of no input in text input field
 
-    this.bindEvents(); // If there is text input, fetch matches from server, initalize a visible property = true, save reference to array of matches, render dropdown
+    this.addListeners(); // If there is text input, fetch matches from server, initalize a visible property = true, save reference to array of matches, render dropdown
     this.reset(); // set visible and matches properties to initial values
   }
 
@@ -38,17 +38,22 @@ class Autocomplete {
     this.overlay = overlay; // Store reference to it
   }
 
-  bindEvents() {
+  addListeners() {
+    document.addEventListener('click', this.clickReset.bind(this));
     this.input.addEventListener('input', this.valueChanged); // This one gets reassigned to debounced return value later
     this.input.addEventListener('keydown', this.handleKeydown.bind(this)); // We bind to Autocomplete since valueChanged context would have been `this.input`
     this.listUI.addEventListener('click', this.handleMouseClick.bind(this)); // Same for this one
   }
 
+  clickReset(event) {
+    let element = event.target;
+    if (element !== this.input) this.reset();
+  }
+
   handleMouseClick(event) {
     let matchElement = event.target;
-
     this.input.value = matchElement.textContent;
-    this.reset();
+
   }
 
   handleKeydown(event) {
