@@ -1,4 +1,4 @@
-## Autocomplete implemenation from scratch
+## Autocomplete
 Enter a country, and dropdown will show up
 
 Features:
