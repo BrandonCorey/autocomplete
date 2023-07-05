@@ -15,4 +15,4 @@ Features:
 
 ### 3. `npm start`
 
-![image](https://github.com/BrandonCorey/autocomplete/assets/93304067/2be83e25-f908-4d87-bef8-d8b7d6e053ba)
+![image](https://github.com/BrandonCorey/autocomplete/assets/93304067/6b3c5c5d-ad9c-4de5-aaec-145e6c02a989)
