@@ -1,5 +1,6 @@
 ## Autocomplete
-Enter a country, and dropdown will show up
+Implemented autocomplete functionality from scratch
+- Enter a country name to see it in action
 
 Features:
 - Tab completion
