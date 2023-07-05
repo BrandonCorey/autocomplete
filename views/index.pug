@@ -4,10 +4,12 @@ html(lang='en')
     meta(charset='utf-8')
     title Autocomplete!
     link(rel='stylesheet' href='stylesheets/css-reset.css')
-    link(rel='styleeshet' href='stylesheets/style.css')
     link(rel='stylesheet' href='stylesheets/autocomplete.css')
-    script(src='javascripts/autocomplete.js')
+    script(type='module' src='javascripts/autocomplete.js')
   body
+    div.header
+      h1(style='text-align: center') Autocomplete demo!
+      h3(style='text-align: center') Made from scratch.
     div.app
       p
         input(name='country')
